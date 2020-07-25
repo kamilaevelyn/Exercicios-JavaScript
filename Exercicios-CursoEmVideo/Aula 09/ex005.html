@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Conpatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: crimson(68,125,199); /*é o fundo da página*/
+            color: darkgrey; /* cor da letra e em baixo a fonte. Isso tudo é CSS*/
+            font: normal 18pt Arial; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1> 
+    <p>Aqui vai o resultado</p> 
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p> 
+    <div id="msg">Clique em mim</div>
+    <script>
+       var corpo = window.document.body 
+       var p1 = window.document.getElementsByTagName('p')[0] //o 'p' significa paragrafo, o 0 significa o primeiro paragrafo
+       p1.style.color = 'blue' //aqui escolhe a cor do paragrafo
+       corpo.style.background = 'black' //muda a cor do fundo da página, que é o corpo
+       window.document.write('Está escrito assim: ' + p1.innerText) 
+       //o codigo de cima pega a frase do paragrafo escolhido acima e completa depois dos dois pontos
+       var d = window.document.getElementById('msg') //sem o 's' em elementS, não precisa especificar qual 'msg'
+       d.style.background = 'green' //fica verde no 'clique em mim' acima
+       //d.innerText = "Estou aguardando" //tem como modificar a frase 'clique em mim' por 'estou aguardando'
+       
+       //window.alert(p1.innerText) // p1.innerText pega o texto e o p1.HTML pega ele inteiro (uma janela com alerta)
+
+       /* consegue buscar algumas configurações dentro da página 
+        window.document.write(window.document.charset) //qual é o set de caracters
+        window.document.write(window.navigator.appName) //mostra qual é o navegador atual
+        window.document.write(window.document.URL) //aparece qual URL está acessando
+        */
+    </script>    
+</body>
+</html>

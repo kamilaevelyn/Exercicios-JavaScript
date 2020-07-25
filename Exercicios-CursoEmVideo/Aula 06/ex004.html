@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+        font: normal 20pt Arial; /*20pt é o tamanho*/
+        } 
+    </style>
+</head>
+<body>
+    <script>
+    var nome = window.prompt('Qual é seu nome?') //na linha de baixo, <strong> fica em negrito </strong>!
+    document.writeln(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`) //o primeiro ${nome} pega o nome que digitar
+    document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br/>`) //o <br/> é quebra de linha
+    document.writeln(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+
+    /*s.lenght //quantos caracteres a string tem
+    s.toUpperCase() //tudo para letras MAIÚSCULAS
+    s.toLowerCase() //tudo para letras minúsculas
+
+    write escreve na tela, writteln pula para linha de baixo
+    */
+    </script>
+</body>
+</html>
